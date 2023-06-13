@@ -377,7 +377,7 @@ header .right_header {}
 
 .CLONECODING1 .inner h3 {
     position: absolute;
-    bottom: 30rem;
+    bottom: 20rem;
     left: 0;
     color: #ffffff73;
 }
@@ -392,15 +392,17 @@ header .right_header {}
 }
 
 .CLONECODING1 .inner .inner02 .cont_right {
-    width: 70%;
+    width: 55%;
+   
 }
 
 .CLONECODING1 .inner .inner02 .cont_right img {
-    width: 100%;
+    width: 122%;
+    padding-left: 22%;
 }
 
 .CLONECODING1 .inner .inner02 .cont_text {
-    width: 45%;
+    width: 50%;
     margin-left: 27rem;
 }
 
@@ -492,7 +494,7 @@ header .right_header {}
 
 .MOBILEDESIGN1 .inner h3 {
     text-align: center;
-    padding-top: 10rem;
+    /* padding-top: 3rem; */
 }
 
 .MOBILEDESIGN1 .inner h3>span {
@@ -623,7 +625,7 @@ header .right_header {}
 /********** 🎈.GRAPHICDESIGN **********/
 .GRAPHICDESIGN {
     width: 100%;
-    height: 150vh;
+    height: 200vh;
 }
 
 .GRAPHICDESIGN .inner {
@@ -654,6 +656,11 @@ header .right_header {}
     width: 100%;
     margin: 10rem 0 0 0;
 }
+
+.GRAPHICDESIGN .inner .mySwiper .swiper-slide:nth-child(2) {
+    margin-top: 8.7rem;
+}
+
 
 /********** 🎈.CONTACT **********/
 .CONTACT {
@@ -707,7 +714,7 @@ header .right_header {}
     font-size: 22px;
     border-radius: 10px;
     margin-right: 28px;
-    margin-top: 10rem;
+    margin-top: 8rem;
 }
 
 .CONTACT .inner .btn a:nth-of-type(2) {
