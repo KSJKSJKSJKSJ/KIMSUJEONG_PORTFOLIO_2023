@@ -1,0 +1,64 @@
+/* Fugaz One, Noto Serif KR, NotoSansKR */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap');
+
+@font-face {
+    font-family: 'NotoSansKR';
+    src: url('http://NotoSansKR-Regular-Alphabetic.woff2') format('woff2'),
+        url('http://NotoSansKR-Regular-Alphabetic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Fugaz One';
+    src: url('http://FugazOne-Regular.woff2') format('woff2'),
+        url('http://FugazOne-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+html, body {
+    font-size: 62.5%;
+    color: #333;
+    font-family: 'Noto Serif KR', serif;
+    font-weight: 400;
+}
+.inner {
+    max-width: 1440px;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+}
+h3 {
+    font-family: 'Fugaz One';
+    font-size: 85px;
+}
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+.swiper-button-next, .swiper-rtl .swiper-button-prev:after,
+.swiper-button-prev, .swiper-rtl .swiper-button-next {
+    content: '';
+    width: 25px;
+    height: 25px;
+    color: #ffffff98;
+}
+
+.mobile {display: none;}
+@media screen and (max-width:1024px) {
+    .pc {display: none;}
+    .mobile {display: block;}
+}

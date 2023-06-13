@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KIMSUJEONG PORTFOLIO</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <link href="css/main.css" rel="stylesheet" />
+
+    <!-- cdnjs.com -->
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <script>
+
+        window.onload = function () {
+
+
+            //🎈헤더
+            let hd = document.getElementsByTagName('header')[0];
+            let WebDesign = document.getElementsByClassName('WEBDESIGN')[0];
+            
+            window.onscroll = function () {
+                let scrollBar = window.scrollY;
+                console.log(scrollBar);
+                console.log(hd.offsetTop); 
+                if (hd.offsetTop < scrollBar) {
+                    //hd한테 class명 on추가
+                    hd.classList.add('on');
+                } else {
+                    hd.classList.remove('on');
+                }
+
+                if (WebDesign.offsetTop < scrollBar) {
+                    hd.style.display = 'none';
+                } else {
+                    hd.style.display = 'block';
+                }
+
+            }
+
+            //🎈모바일메뉴
+            let openBtn = document.querySelector('.open');
+            let closeBtn = document.querySelector('.close');
+            let mobileNav = document.querySelector('.m_nav');
+
+            mobileNav.style.display = 'none';
+
+            openBtn.onclick = function () {
+                mobileNav.style.display = 'block';
+            }
+            closeBtn.onclick = function () {
+                mobileNav.style.display = 'none';
+            }
+            
+
+            //🎈WEBDESIGN
+            var swiper = new Swiper(".WEBDESIGN1", {
+                pagination: {
+                    el: ".swiper-pagination",
+                    type: "fraction",
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+
+            //🎈CLONECODING
+            var swiper = new Swiper(".CLONECODING1", {
+                pagination: {
+                    el: ".swiper-pagination",
+                    type: "fraction",
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+
+            //🎈MOBILEDESIGN
+            var swiper = new Swiper(".MOBILEDESIGN1", {
+                pagination: {
+                    el: ".swiper-pagination",
+                    type: "fraction",
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+
+            //🎈GRAPHICDESIGN
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 4,
+                centeredSlides: true,
+                spaceBetween: 30,
+
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
+
+
+
+        } //window.onload
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="inner">
+            <h1>
+                <a href="#">
+                    <img src="img/ksj_logo.png" alt="logo" />
+                </a>
+            </h1>
+            <nav class="pc">
+                <ul class="gnb">
+                    <li><a href="#a01" >ABOUT ME</a></li>
+                    <li><a href="#a02">WEB</a></li>
+                    <li><a href="#a03">GRAPHIC DESIGN</a></li>
+                    <li><a href="#q04">CONTACT</a></li>
+                </ul><!-- .gnb end -->
+            </nav><!-- .pc end -->
+
+            <div class="mobile open">
+                <img src="img/menu.png" alt="메뉴보기" />
+            </div><!-- .mobile open end -->
+
+            <nav class="mobile m_nav">
+                <div class="close">
+                    <img src="img/close.png" alt="메뉴닫기" />
+                </div><!-- .close end -->
+                <ul class="gnb">
+                    <li><a href="#">ABOUT ME</a></li>
+                    <li><a href="#">WEB</a></li>
+                    <li><a href="#">GRAPHIC DESIGN</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul><!-- .gnb end -->
+            </nav><!--.mobile m_nav end -->
+        </div><!-- .inner end -->
+
+        <div class="right_header">
+            <div class="right_text">KIMSUJEONG PORTFOLIO 2023.</div>
+        </div><!-- .right_header end -->
+
+    </header>
+
+    <main>
+        <section class="main_visual">
+            <div>
+                <p><span>P</span>ORTFOLIO.</p>
+                <p>한 곳에 머무르지 않고 계속해서 정진하는, <br />
+                    실패를 두려워하지 않고 새로운 변화를 추구하는 김수정입니다.</p>
+            </div>
+        </section><!-- .main_visual end -->
+
+        <section class="ABOUTME" id="a01">
+            <div class="inner">
+                <div class="PROFILE_img">
+                    <figure>
+                        <img src="img/3545사이즈-김수정.jpg" alt="김수정증명사진" />
+                    </figure>
+                </div><!-- .PROFILE_img end -->
+                <div class="rist">
+                    <div class="PROFILE_left">
+                        <h4><span>P</span>ROFILE</h4>
+                        <div>
+                            <ul>
+                                <li>NAME</li>
+                                <li>AGE</li>
+                                <li>ADDRESS</li>
+                                <li>PHONE NUMBER</li>
+                                <li>E-MAIL</li>
+                            </ul>
+                            <ul>
+                                <li>김수정</li>
+                                <li>1991. 10. 26.</li>
+                                <li>부산광역시 동래구</li>
+                                <li>010.5555.2999</li>
+                                <li>sujkim919@gmail.com</li>
+                            </ul>
+                        </div>
+                        <ul class="CHARACTER">
+                            <li>#긍정적인</li>
+                            <li>#성실한</li>
+                            <li>#책임감있는</li>
+                        </ul><!-- .CHARACTER end -->
+
+                    </div><!-- .PROFILE_left end -->
+
+                    <div class="edu_inner">
+                        <div class="EDUCATION">
+                            <h4><span>E</span>DUCATION</h4>
+                            <div>
+                                <ul>
+                                    <li>2023.06</li>
+                                    <li>2013.08</li>
+                                </ul>
+                                <ul>
+                                    <li>NCS기반 반응형 웹디자인&웹퍼블리셔 교육과정 이수</li>
+                                    <li>신라대학교 체육학부 졸업</li>
+                                </ul>
+                            </div>
+                        </div><!-- .EDUCATION end -->
+                    </div><!-- .edu_inner end -->
+
+                    <div class="skills_inner">
+                        <div class="SKILLS">
+                            <h4><span>S</span>KILLS</h4>
+                            <div>
+                                <ul>
+                                    <li>HTML, CSS, Js, Ps, Ai, Word, PPT</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!-- .skiils_inner end -->
+                </div><!-- .rist end -->
+            </div><!-- .inner end -->
+        </section><!-- .ABOUTME end -->
+
+        <section class="WEBDESIGN" id="a02">
+            <!-- Swiper -->
+            <div class="swiper WEBDESIGN1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="inner">
+                            <h3><span>WEB</span> DESIGN.</h3>
+                            <div class="inner02">
+                                <div class="cont_right">
+                                    <img src="img/ROSAMANSION.jpg" alt="홈페이지" />
+                                </div><!-- .cont_right end -->
+                                <div class="cont_text">
+                                    <p>장미맨숀<span>ROSA MANSION</span></p>
+                                    <p>기본형페이지</p>
+                                    <div>
+                                        <div class="cont_text02">
+                                            <ul>
+                                                <li>참여도</li>
+                                                <li>프로그램</li>
+                                                <li>언어</li>
+                                            </ul>
+                                            <ul>
+                                                <li>기획/디자인/코딩 100%</li>
+                                                <li>Visual Studio Code, Ps</li>
+                                                <li>HTML, CSS</li>
+                                            </ul>
+                                        </div><!-- .cont_text02 end -->
+                                        <span>
+                                            내추럴한 브라운 계열의 색상, 딥그린 색상 및 화려한 <br />
+                                            패턴이 들어간 이미지를 이용하여 포인트를 주어, <br />
+                                            따뜻한 레트로 느낌의 웹페이지를 디자인하였습니다.
+                                        </span>
+                                        <div class="btn">
+                                            <a href="#">상세페이지</a>
+                                            <a href="https://ksjksjksjksj.github.io/rosamansion/">홈페이지</a>
+                                        </div><!-- .btn end -->
+                                    </div>
+
+                                </div><!-- .cont_text end -->
+                            </div><!-- .inner02 end /1-->
+
+                        </div><!-- .inner end -->
+
+                    </div><!-- .swiper-slide end /1 -->
+
+                    <div class="swiper-slide">
+                        <div class="inner">
+                            <h3><span>WEB</span> DESIGN.</h3>
+                            <div class="inner02">
+                                <div class="cont_right">
+                                    <img src="img/dongaotsuka.jpg" alt="홈페이지" />
+                                </div><!-- .cont_right end -->
+                                <div class="cont_text">
+                                    <p>동아오츠카<span>DONGA-OTSUKA</span></p>
+                                    <p>기본형페이지</p>
+                                    <div>
+                                        <div class="cont_text02">
+                                            <ul>
+                                                <li>참여도</li>
+                                                <li>프로그램</li>
+                                                <li>언어</li>
+                                            </ul>
+                                            <ul>
+                                                <li>기획/디자인/코딩 100%</li>
+                                                <li>Visual Studio Code, Ps</li>
+                                                <li>HTML, CSS</li>
+                                            </ul>
+                                        </div><!-- .cont_text02 end -->
+                                        <span>
+                                            브랜드의 시그니처 컬러인 파란색을 이용하여 포인트를 <br />
+                                            주었고, 메인비주얼에 동영상을 사용하여 생동감있는<br />
+                                            홈페이지로 디자인하였습니다.
+                                        </span>
+                                        <div class="btn">
+                                            <a href="#">상세페이지</a>
+                                            <a href="https://ksjksjksjksj.github.io/DONGA-OTSUKA/">홈페이지</a>
+                                        </div><!-- .btn end -->
+                                    </div>
+
+                                </div><!-- .cont_text end -->
+                            </div><!-- .inner02 end /1-->
+
+                        </div><!-- .inner end -->
+
+                    </div><!-- .swiper-slide end /2 -->
+
+                    <div class="swiper-slide web_item03">
+                        <div class="inner">
+                            <h3><span>WEB</span> DESIGN.</h3>
+                            <div class="inner02">
+                                <div class="cont_right">
+                                    <img src="img/samsung.png" alt="홈페이지" />
+                                </div><!-- .cont_right end -->
+                                <div class="cont_text">
+                                    <p>삼성레포츠센터<span>S.S LEPORTS CENTER</span></p>
+                                    <p>반응형페이지</p>
+                                    <div>
+                                        <div class="cont_text02">
+                                            <ul>
+                                                <li>참여도</li>
+                                                <li>프로그램</li>
+                                                <li>언어</li>
+                                            </ul>
+                                            <ul>
+                                                <li>기획/디자인/코딩 100%</li>
+                                                <li>Visual Studio Code, Ps</li>
+                                                <li>HTML, CSS</li>
+                                            </ul>
+                                        </div><!-- .cont_text02 end -->
+                                        <span>
+                                            필요한 정보를 편리하고 쉽게 찾을 수 있도록 분류하였습니다. <br />
+                                            애니매이션 효과와 감각적인 텍스트 배치 등을 통해 도시적인 <br />
+                                            느낌의 웹페이지를 디자인하였습니다.
+                                        </span>
+                                        <div class="btn">
+                                            <a href="#">상세페이지</a>
+                                            <a href="#">홈페이지</a>
+                                        </div><!-- .btn end -->
+                                    </div>
+
+                                </div><!-- .cont_text end -->
+                            </div><!-- .inner02 end /1-->
+
+                        </div><!-- .inner end -->
+
+                    </div><!-- .swiper-slide end /3 -->
+
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <!-- <div class="swiper-pagination"></div> -->
+            </div><!-- .WEBDESIGN1 end -->
+
+
+            <section class="CLONECODING">
+                <!-- Swiper -->
+                <div class="swiper CLONECODING1">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="inner">
+                                <h3>CLONE CODING.</h3>
+                                <div class="inner02">
+                                    <div class="cont_right">
+                                        <img src="img/vieetmaison_img.png" alt="홈페이지" />
+                                    </div><!-- .cont_right end -->
+                                    <div class="cont_text">
+                                        <p>비에메종<span>vieetmaison</span></p>
+                                        <p>반응형페이지</p>
+                                        <div>
+                                            <div class="cont_text02">
+                                                <ul>
+                                                    <li>참여도</li>
+                                                    <li>프로그램</li>
+                                                    <li>언어</li>
+                                                </ul>
+                                                <ul>
+                                                    <li>코딩 100%</li>
+                                                    <li>Visual Studio Code, Ps</li>
+                                                    <li>HTML, CSS</li>
+                                                </ul>
+                                            </div><!-- .cont_text02 end -->
+                                            <span>비에메종 홈페이지를 모작하였습니다.</span>
+                                            <div class="btn">
+                                                <a href="#">상세페이지</a>
+                                                <a href="https://ksjksjksjksj.github.io/vieetmaison/">홈페이지</a>
+                                            </div><!-- .btn end -->
+                                        </div>
+
+                                    </div><!-- .cont_text end -->
+                                </div><!-- .inner02 end /1-->
+
+                            </div><!-- .inner end -->
+
+                        </div><!-- .swiper-slide end /1 -->
+
+                        <div class="swiper-slide">
+                            <div class="inner">
+                                <h3>CLONE CODING.</h3>
+                                <div class="inner02">
+                                    <div class="cont_right">
+                                        <img src="img/vieetmaison_img.png" alt="홈페이지" />
+                                    </div><!-- .cont_right end -->
+                                    <div class="cont_text">
+                                        <p>파리바게뜨<span>PARIS-BAGUETTE</span></p>
+                                        <p>기본형페이지</p>
+                                        <div>
+                                            <div class="cont_text02">
+                                                <ul>
+                                                    <li>참여도</li>
+                                                    <li>프로그램</li>
+                                                    <li>언어</li>
+                                                </ul>
+                                                <ul>
+                                                    <li>코딩 100%</li>
+                                                    <li>Visual Studio Code, Ps</li>
+                                                    <li>HTML, CSS</li>
+                                                </ul>
+                                            </div><!-- .cont_text02 end -->
+                                            <span>파리바게뜨 홈페이지를 모작하였습니다.</span>
+                                            <div class="btn">
+                                                <a href="#">상세페이지</a>
+                                                <a href="https://ksjksjksjksj.github.io/PARIS-BAGUETTE/">홈페이지</a>
+                                            </div><!-- .btn end -->
+                                        </div>
+
+                                    </div><!-- .cont_text end -->
+                                </div><!-- .inner02 end /2-->
+
+                            </div><!-- .inner end -->
+
+                        </div><!-- .swiper-slide end /2 -->
+
+                        <div class="swiper-slide">
+                            <div class="inner">
+                                <h3>CLONE CODING.</h3>
+                                <div class="inner02">
+                                    <div class="cont_right">
+                                        <img src="img/vieetmaison_img.png" alt="홈페이지" />
+                                    </div><!-- .cont_right end -->
+                                    <div class="cont_text">
+                                        <p>로컬라이브<span>PARIS-BAGUETTE</span></p>
+                                        <p>기본형페이지</p>
+                                        <div>
+                                            <div class="cont_text02">
+                                                <ul>
+                                                    <li>참여도</li>
+                                                    <li>프로그램</li>
+                                                    <li>언어</li>
+                                                </ul>
+                                                <ul>
+                                                    <li>코딩 100%</li>
+                                                    <li>Visual Studio Code, Ps</li>
+                                                    <li>HTML, CSS</li>
+                                                </ul>
+                                            </div><!-- .cont_text02 end -->
+                                            <span>로컬라이브 홈페이지를 모작하였습니다.</span>
+                                            <div class="btn">
+                                                <a href="#">상세페이지</a>
+                                                <a href="#">홈페이지</a>
+                                            </div><!-- .btn end -->
+                                        </div>
+
+                                    </div><!-- .cont_text end -->
+                                </div><!-- .inner02 end /3-->
+
+                            </div><!-- .inner end -->
+
+                        </div><!-- .swiper-slide end /3 -->
+
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <!-- <div class="swiper-pagination"></div> -->
+                </div><!-- .CLONECODING1 end -->
+
+                </div><!-- .inner end -->
+            </section><!-- .CLONE CODING end -->
+
+            <section class="MOBILEDESIGN">
+                <!-- Swiper -->
+                <div class="swiper MOBILEDESIGN1">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="inner">
+                                <h3><span>MOBILE</span> DESIGN.</h3>
+                                <div class="inner02">
+                                    <div class="cont_right">
+                                        <img src="img/dae_img.png" alt="대림미술관 홈페이지" />
+                                        <img src="img/dae_menu.png" alt="대림미술관 메뉴" />
+                                    </div><!-- .cont_right end -->
+                                    <div class="cont_text">
+                                        <p>대림미술관<span>daelimmuseum</span></p>
+                                        <p>앱 디자인</p>
+                                        <div>
+                                            <div class="cont_text02">
+                                                <ul>
+                                                    <li>참여도</li>
+                                                    <li>프로그램</li>
+                                                    <li>언어</li>
+                                                </ul>
+                                                <ul>
+                                                    <li>디자인/코딩 100%</li>
+                                                    <li>Visual Studio Code, Pigma</li>
+                                                    <li>HTML, CSS</li>
+                                                </ul>
+                                            </div><!-- .cont_text02 end -->
+                                            <span>대림미술관 홈페이지를 모바일형으로 모작하였습니다.</span>
+                                            <div class="btn">
+                                                <a href="#">상세페이지</a>
+                                                <a href="#">홈페이지</a>
+                                            </div><!-- .btn end -->
+                                        </div>
+                                    </div><!-- .cont_text end -->
+                                </div><!-- .inner02 end /1-->
+
+                            </div><!-- .inner end -->
+
+                        </div><!-- .swiper-slide end /1 -->
+
+                        <div class="swiper-slide">
+                            <div class="inner">
+                                <h3><span>MOBILE</span> DESIGN.</h3>
+                                <div class="inner02">
+                                    <div class="cont_right">
+                                        <img src="img/manyo.png" alt="마녀공장 홈페이지" />
+                                        <img src="img/manyo_menu.png" alt="마녀공장 메뉴" />
+                                    </div><!-- .cont_right end -->
+                                    <div class="cont_text">
+                                        <p>마녀공장<span>manyo</span></p>
+                                        <p>앱 디자인</p>
+                                        <div>
+                                            <div class="cont_text02">
+                                                <ul>
+                                                    <li>참여도</li>
+                                                    <li>프로그램</li>
+                                                    <li>언어</li>
+                                                </ul>
+                                                <ul>
+                                                    <li>코딩 100%</li>
+                                                    <li>Visual Studio Code, Pigma</li>
+                                                    <li>HTML, CSS</li>
+                                                </ul>
+                                            </div><!-- .cont_text02 end -->
+                                            <span>대림미술관 홈페이지를 모바일형으로 모작하였습니다.</span>
+                                            <div class="btn">
+                                                <a href="#">상세페이지</a>
+                                                <a href="#">홈페이지</a>
+                                            </div><!-- .btn end -->
+                                        </div>
+                                    </div><!-- .cont_text end -->
+                                </div><!-- .inner02 end /1-->
+
+                            </div><!-- .inner end -->
+
+                        </div><!-- .swiper-slide end /2 -->
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <!-- <div class="swiper-pagination"></div> -->
+                </div><!-- .MOBILEDESIGN1 end -->
+            </section><!-- .MOBILEDESIGN end -->
+
+            <section class="GRAPHICDESIGN" id="a03">
+                <div class="inner">
+                    <h3><span>GRAPHIC</span> DESIGN</h3>
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <!-- <div class="swiper-slide"></div> -->
+                            <div class="swiper-slide">
+                                <div class="item01">
+                                    <a href="#"><img src="img/sujeong_burger.jpg" alt="수정햄버거" /></a>
+                                    <p>CRYSTAL BURGER</p>
+                                </div><!-- .item01 end -->
+                                <div class="item02">
+                                    <a href="#"><img src="img/cardnews02.jpg" alt="인스타카드뉴스02" /></a>
+                                    <p>SNS CARD NEWS</p>
+                                </div><!-- .item01 end -->
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="item03">
+                                    <a href="#"><img src="img/cardnews01.jpg" alt="인스타카드뉴스01" /></a>
+                                    <p>SNS CARD NEWS</p>
+                                </div><!-- .item03 end -->
+                                <div class="item04">
+                                    <a href="#"><img src="img/mytravel.jpg" alt="MY TRAVEL" /></a>
+                                    <p>MY TRAVEL</p>
+                                </div><!-- .item04 end -->
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="item05">
+                                    <a href="#"><img src="img/kolonsport.jpg" alt="코오롱" /></a>
+                                    <p>KOLONSPORT</p>
+                                </div><!-- .item05 end -->
+                            </div>
+
+                        </div>
+                        <!-- <div class="swiper-pagination"></div> -->
+                    </div>
+
+                </div><!-- .inner end -->
+            </section><!-- .GRAPHICDESIGN end -->
+
+            <section class="CONTACT" id="a04">
+                <div class="inner">
+                    <p>CRYSTAL<br />
+                        IS<br />
+                        ALWAYS<br />
+                        GOOD
+                    </p>
+
+                    <div>
+                        <h3>CONTACT</h3>
+                    </div>
+                    <ul>
+                        <li>010.5555.2999</li>
+                    </ul>
+                    <ul>
+                        <li>sujkim919@gmail.com</li>
+                    </ul>
+
+                    <div class="btn">
+                        <a href="#">이력서 다운로드</a>
+                        <a href="#">포트폴리오 다운로드</a>
+                    </div><!-- .btn end -->
+                </div>
+            </section><!-- .CONTACT end -->
+    </main>
+</body>
+
+</html>
