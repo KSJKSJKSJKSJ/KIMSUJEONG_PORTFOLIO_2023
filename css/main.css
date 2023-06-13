@@ -513,7 +513,7 @@ header .right_header {}
     position: relative;
     width: 30rem;
     height: 90%;
-    margin-right: 15rem;
+    margin-right: 25rem;
 
 }
 
@@ -547,7 +547,7 @@ header .right_header {}
 .MOBILEDESIGN1 .inner .inner02 .cont_text {
     width: 50%;
     order: -1;
-    margin-left: 5rem;
+    /* margin-left: 5rem; */
 }
 
 .MOBILEDESIGN1 .inner .inner02 .cont_text p {
