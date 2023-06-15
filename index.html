@@ -6,11 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KIMSUJEONG PORTFOLIO</title>
-    
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
     <link href="css/main.css" rel="stylesheet" />
 
+    <script src="lib/jquery-3.7.0.min.js"></script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
@@ -22,11 +23,11 @@
             //🎈헤더
             let hd = document.getElementsByTagName('header')[0];
             let WebDesign = document.getElementsByClassName('WEBDESIGN')[0];
-            
+
             window.onscroll = function () {
                 let scrollBar = window.scrollY;
                 console.log(scrollBar);
-                console.log(hd.offsetTop); 
+                console.log(hd.offsetTop);
                 if (hd.offsetTop < scrollBar) {
                     //hd한테 class명 on추가
                     hd.classList.add('on');
@@ -55,7 +56,36 @@
             closeBtn.onclick = function () {
                 mobileNav.style.display = 'none';
             }
+
+            //상세페이지
+            $('.btn > a:first-child').click(function(){
+                $('.ssl_page').css({
+                   'display' : 'block'
+                   
+                });
+                $('body').on('scroll touchmove mousewheel', function(event){
+                    event.preventDefault();
+                    event.stopPropagation();
+                    return false;
+                });
+                //$('.bg').css({
+                //    'display' : 'block'
+                //})
+                //$('body').css({
+                //    'overflow' : 'hidden'
+                //})
+                
+            });
+
+            $('.close').click(function(){
+                $('.ssl_page').css({
+                    'display' : 'none'
+                });
+                $('body').off('scroll touchmove mousewheel');
+            });
+
             
+
 
             //🎈WEBDESIGN
             var swiper = new Swiper(".WEBDESIGN1", {
@@ -95,16 +125,24 @@
 
             //🎈GRAPHICDESIGN
             var swiper = new Swiper(".mySwiper", {
-                slidesPerView: 3.5,
-                centeredSlides: true,
+                slidesPerView: 2,
+                //centeredSlides: true,
                 spaceBetween: 30,
 
                 pagination: {
                     el: ".swiper-pagination",
                     clickable: true,
                 },
+                // 스크롤바 설정하기
+                scrollbar: {
+                    el: '.swiper-scrollbar',
+                        draggable: true,
+                },
+
+
             });
 
+            
 
 
         } //window.onload
@@ -112,6 +150,7 @@
 </head>
 
 <body>
+    
     <header>
         <div class="inner">
             <h1>
@@ -121,7 +160,7 @@
             </h1>
             <nav class="pc">
                 <ul class="gnb">
-                    <li><a href="#a01" >ABOUT ME</a></li>
+                    <li><a href="#a01">ABOUT ME</a></li>
                     <li><a href="#a02">WEB</a></li>
                     <li><a href="#a03">GRAPHIC DESIGN</a></li>
                     <li><a href="#q04">CONTACT</a></li>
@@ -145,9 +184,9 @@
             </nav><!--.mobile m_nav end -->
         </div><!-- .inner end -->
 
-        <div class="right_header">
+        <!-- <div class="right_header">
             <div class="right_text">KIMSUJEONG PORTFOLIO 2023.</div>
-        </div><!-- .right_header end -->
+        </div> -->
 
     </header>
 
@@ -257,9 +296,14 @@
                                             따뜻한 레트로 느낌의 웹페이지를 디자인하였습니다.
                                         </span>
                                         <div class="btn">
-                                            <a href="#">상세페이지</a>
+                                            <a href="#none">상세페이지</a>
                                             <a href="https://ksjksjksjksj.github.io/rosamansion/">홈페이지</a>
                                         </div><!-- .btn end -->
+                                        <div class="bg"></div>
+                                        <div class="ssl_page" id="s_page">
+                                            <img src="img/ssl_page.jpg" alt="삼성 상세페이지" />
+                                            <div class="close"><img src="img/close02.png" alt="" /></div>
+                                        </div><!-- .ssl_page end -->
                                     </div>
 
                                 </div><!-- .cont_text end -->
@@ -298,9 +342,15 @@
                                             홈페이지로 디자인하였습니다.
                                         </span>
                                         <div class="btn">
-                                            <a href="#">상세페이지</a>
+                                            <a href="#none">상세페이지</a>
                                             <a href="https://ksjksjksjksj.github.io/DONGA-OTSUKA/">홈페이지</a>
                                         </div><!-- .btn end -->
+
+                                        <div class="ssl_page" id="s_page">
+                                            <img src="img/ssl_page.jpg" alt="삼성 상세페이지" />
+                                            <div class="close"><img src="img/close02.png" alt="" /></div>
+                                        </div><!-- .ssl_page end -->
+
                                     </div>
 
                                 </div><!-- .cont_text end -->
@@ -310,12 +360,12 @@
 
                     </div><!-- .swiper-slide end /2 -->
 
-                    <div class="swiper-slide web_item03">
+                    <div class="swiper-slide">
                         <div class="inner">
                             <h3><span>WEB</span> DESIGN.</h3>
                             <div class="inner02">
                                 <div class="cont_right">
-                                    <img src="img/samsung.png" alt="홈페이지" />
+                                    <img src="img/ssl.jpg" alt="홈페이지" />
                                 </div><!-- .cont_right end -->
                                 <div class="cont_text">
                                     <p>삼성레포츠센터<span>S.S LEPORTS CENTER</span></p>
@@ -339,9 +389,14 @@
                                             느낌의 웹페이지를 디자인하였습니다.
                                         </span>
                                         <div class="btn">
-                                            <a href="#">상세페이지</a>
-                                            <a href="#">홈페이지</a>
+                                            <a href="#none">상세페이지</a>
+                                            <a href="https://ksjksjksjksj.github.io/SS_LEPORTS_CENTER/">홈페이지</a>
                                         </div><!-- .btn end -->
+
+                                        <div class="ssl_page" id="s_page">
+                                            <img src="img/ssl_page.jpg" alt="삼성 상세페이지" />
+                                            <div class="close"><img src="img/close02.png" alt="" /></div>
+                                        </div><!-- .ssl_page end -->
                                     </div>
 
                                 </div><!-- .cont_text end -->
@@ -367,7 +422,7 @@
                                 <h3>CLONE CODING.</h3>
                                 <div class="inner02">
                                     <div class="cont_right">
-                                        <img src="img/vieetmaison_img.png" alt="홈페이지" />
+                                        <img src="img/vieetmaison_pc.png" alt="홈페이지" />
                                     </div><!-- .cont_right end -->
                                     <div class="cont_text">
                                         <p>비에메종<span>vieetmaison</span></p>
@@ -387,7 +442,7 @@
                                             </div><!-- .cont_text02 end -->
                                             <span>비에메종 홈페이지를 모작하였습니다.</span>
                                             <div class="btn">
-                                                <a href="#">상세페이지</a>
+                                                <!-- <a href="#">상세페이지</a> -->
                                                 <a href="https://ksjksjksjksj.github.io/vieetmaison/">홈페이지</a>
                                             </div><!-- .btn end -->
                                         </div>
@@ -404,7 +459,7 @@
                                 <h3>CLONE CODING.</h3>
                                 <div class="inner02">
                                     <div class="cont_right">
-                                        <img src="img/vieetmaison_img.png" alt="홈페이지" />
+                                        <img src="img/PARIS-BAGUETTE_pc.png" alt="홈페이지" />
                                     </div><!-- .cont_right end -->
                                     <div class="cont_text">
                                         <p>파리바게뜨<span>PARIS-BAGUETTE</span></p>
@@ -424,7 +479,7 @@
                                             </div><!-- .cont_text02 end -->
                                             <span>파리바게뜨 홈페이지를 모작하였습니다.</span>
                                             <div class="btn">
-                                                <a href="#">상세페이지</a>
+                                                <!-- <a href="#">상세페이지</a> -->
                                                 <a href="https://ksjksjksjksj.github.io/PARIS-BAGUETTE/">홈페이지</a>
                                             </div><!-- .btn end -->
                                         </div>
@@ -441,10 +496,10 @@
                                 <h3>CLONE CODING.</h3>
                                 <div class="inner02">
                                     <div class="cont_right">
-                                        <img src="img/vieetmaison_img.png" alt="홈페이지" />
+                                        <img src="img/local-live .png" alt="홈페이지" />
                                     </div><!-- .cont_right end -->
                                     <div class="cont_text">
-                                        <p>로컬라이브<span>PARIS-BAGUETTE</span></p>
+                                        <p>로컬라이브<span>local-live</span></p>
                                         <p>기본형페이지</p>
                                         <div>
                                             <div class="cont_text02">
@@ -461,8 +516,8 @@
                                             </div><!-- .cont_text02 end -->
                                             <span>로컬라이브 홈페이지를 모작하였습니다.</span>
                                             <div class="btn">
-                                                <a href="#">상세페이지</a>
-                                                <a href="#">홈페이지</a>
+                                                <!-- <a href="#">상세페이지</a> -->
+                                                <a href="https://ksjksjksjksj.github.io/local-live/">홈페이지</a>
                                             </div><!-- .btn end -->
                                         </div>
 
@@ -513,7 +568,7 @@
                                             <span>대림미술관 홈페이지를 모바일형으로 모작하였습니다.</span>
                                             <div class="btn">
                                                 <a href="#">상세페이지</a>
-                                                <a href="#">홈페이지</a>
+                                                <a href="https://ksjksjksjksj.github.io/daelimmuseum_mobile/">홈페이지</a>
                                             </div><!-- .btn end -->
                                         </div>
                                     </div><!-- .cont_text end -->
@@ -550,7 +605,7 @@
                                             <span>대림미술관 홈페이지를 모바일형으로 모작하였습니다.</span>
                                             <div class="btn">
                                                 <a href="#">상세페이지</a>
-                                                <a href="#">홈페이지</a>
+                                                <a href="https://ksjksjksjksj.github.io/manyo/">홈페이지</a>
                                             </div><!-- .btn end -->
                                         </div>
                                     </div><!-- .cont_text end -->
@@ -568,41 +623,43 @@
 
             <section class="GRAPHICDESIGN" id="a03">
                 <div class="inner">
-                    <h3><span>GRAPHIC</span> DESIGN</h3>
+                    <h3><span>GRAPHIC</span> DESIGN.</h3>
                     <div class="swiper mySwiper">
                         <div class="swiper-wrapper">
                             <!-- <div class="swiper-slide"></div> -->
+                        
                             <div class="swiper-slide">
                                 <div class="item01">
                                     <a href="#"><img src="img/sujeong_burger.jpg" alt="수정햄버거" /></a>
-                                    <p>CRYSTAL BURGER</p>
+                                    <p>adobe photoshop</p>
                                 </div><!-- .item01 end -->
                                 <div class="item02">
                                     <a href="#"><img src="img/cardnews02.jpg" alt="인스타카드뉴스02" /></a>
-                                    <p>SNS CARD NEWS</p>
+                                    <p>adobe photoshop</p>
                                 </div><!-- .item01 end -->
                             </div>
                             <div class="swiper-slide">
                                 <div class="item03">
                                     <a href="#"><img src="img/cardnews01.jpg" alt="인스타카드뉴스01" /></a>
-                                    <p>SNS CARD NEWS</p>
+                                    <p>adobe photoshop</p>
                                 </div><!-- .item03 end -->
                                 <div class="item04">
                                     <a href="#"><img src="img/mytravel.jpg" alt="MY TRAVEL" /></a>
-                                    <p>MY TRAVEL</p>
+                                    <p>adobe photoshop</p>
                                 </div><!-- .item04 end -->
                             </div>
                             <div class="swiper-slide">
                                 <div class="item05">
                                     <a href="#"><img src="img/kolonsport.jpg" alt="코오롱" /></a>
-                                    <p>KOLONSPORT</p>
+                                    <p>adobe photoshop</p>
                                 </div><!-- .item05 end -->
                             </div>
 
-                            
-
                         </div>
                         <!-- <div class="swiper-pagination"></div> -->
+                    </div>
+                    <div class="swiper-scrollbar">
+                        <div class="swiper-scrollbar-drag"></div>
                     </div>
 
                 </div><!-- .inner end -->
@@ -627,8 +684,8 @@
                     </ul>
 
                     <div class="btn">
-                        <a href="#">이력서 다운로드</a>
-                        <a href="#">포트폴리오 다운로드</a>
+                        <a href="img/김수정_입사지원서.pdf" download target="_blank">이력서 다운로드</a>
+                        <a href="img/김수정_포트폴리오.pdf" download target="_blank">포트폴리오 다운로드</a>
                     </div><!-- .btn end -->
                 </div>
             </section><!-- .CONTACT end -->
