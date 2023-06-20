@@ -329,11 +329,12 @@ header .right_header {}
     padding-bottom: 10px;
 }
 
-.WEBDESIGN1 .swiper-slide .inner .inner02 .cont_text span {
+.WEBDESIGN1 .swiper-slide .inner .inner02 .cont_text p:last-child {
     font-size: 20px;
+    display: inline-block;
 }
 
-.WEBDESIGN1 .swiper-slide .inner .inner02 .cont_text .btn a {
+.WEBDESIGN1 .swiper-slide .inner .inner02 .cont_text button {
     display: inline-block;
     width: 200px;
     height: 60px;
@@ -345,9 +346,10 @@ header .right_header {}
     font-size: 18px;
     border-radius: 10px;
     margin-right: 10px;
+    cursor: pointer;
 }
 
-.WEBDESIGN1 .swiper-slide .inner .inner02 .cont_text .btn a:nth-of-type(2) {
+.WEBDESIGN1 .swiper-slide .inner .inner02 .cont_text button:nth-of-type(2) {
     background-color: #FDF7C3;
 }
 
@@ -752,7 +754,7 @@ header .right_header {}
 }
 
 .GRAPHICDESIGN .inner .mySwiper .swiper-slide:nth-child(2) {
-    margin-top: 11rem;
+    margin-top: 8.1rem;
 }
 
 .GRAPHICDESIGN .inner .swiper-scrollbar {

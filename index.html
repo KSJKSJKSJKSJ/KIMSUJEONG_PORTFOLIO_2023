@@ -57,8 +57,44 @@
                 mobileNav.style.display = 'none';
             }
 
-            //상세페이지
-            $('.btn > a:first-child').click(function(){
+            //🤍🤍상세페이지
+            $('.btn01').click(function(){
+                $('.ssl_page').css({
+                   'display' : 'block'
+                   
+                });
+                $('body').on('scroll touchmove mousewheel', function(event){
+                    event.preventDefault();
+                    event.stopPropagation();
+                    return false;
+                });
+                //$('.bg').css({
+                //    'display' : 'block'
+                //})
+                //$('body').css({
+                //    'overflow' : 'hidden'
+                //})
+                
+            });
+            $('.btn02').click(function(){
+                $('.ssl_page').css({
+                   'display' : 'block'
+                   
+                });
+                $('body').on('scroll touchmove mousewheel', function(event){
+                    event.preventDefault();
+                    event.stopPropagation();
+                    return false;
+                });
+                //$('.bg').css({
+                //    'display' : 'block'
+                //})
+                //$('body').css({
+                //    'overflow' : 'hidden'
+                //})
+                
+            });
+            $('.btn03').click(function(){
                 $('.ssl_page').css({
                    'display' : 'block'
                    
@@ -290,18 +326,17 @@
                                                 <li>HTML, CSS</li>
                                             </ul>
                                         </div><!-- .cont_text02 end -->
-                                        <span>
+                                        <p>
                                             내추럴한 브라운 계열의 색상, 딥그린 색상 및 화려한 <br />
                                             패턴이 들어간 이미지를 이용하여 포인트를 주어, <br />
                                             따뜻한 레트로 느낌의 웹페이지를 디자인하였습니다.
-                                        </span>
-                                        <div class="btn">
-                                            <a href="#none">상세페이지</a>
-                                            <a href="https://ksjksjksjksj.github.io/rosamansion/">홈페이지</a>
-                                        </div><!-- .btn end -->
-                                        <div class="bg"></div>
+                                        </p>
+
+                                        <button class="btn01">상세페이지</button>
+                                        <button onclick="location.href='https://ksjksjksjksj.github.io/rosamansion/';">홈페이지</button>
+                                        
                                         <div class="ssl_page" id="s_page">
-                                            <img src="img/ssl_page.jpg" alt="삼성 상세페이지" />
+                                            <img src="img/ROSA_MANSION_UIUX_WEB_REDESIGN.jpg" alt="삼성 상세페이지" />
                                             <div class="close"><img src="img/close02.png" alt="" /></div>
                                         </div><!-- .ssl_page end -->
                                     </div>
@@ -336,16 +371,15 @@
                                                 <li>HTML, CSS</li>
                                             </ul>
                                         </div><!-- .cont_text02 end -->
-                                        <span>
+                                        <p>
                                             브랜드의 시그니처 컬러인 파란색을 이용하여 포인트를 <br />
                                             주었고, 메인비주얼에 동영상을 사용하여 생동감있는<br />
                                             홈페이지로 디자인하였습니다.
-                                        </span>
-                                        <div class="btn">
-                                            <a href="#none">상세페이지</a>
-                                            <a href="https://ksjksjksjksj.github.io/DONGA-OTSUKA/">홈페이지</a>
-                                        </div><!-- .btn end -->
+                                        </p>
 
+                                        <button class="btn02">상세페이지</button>
+                                        <button onclick="location.href='https://ksjksjksjksj.github.io/DONGA-OTSUKA/';">홈페이지</button>
+                                        
                                         <div class="ssl_page" id="s_page">
                                             <img src="img/ssl_page.jpg" alt="삼성 상세페이지" />
                                             <div class="close"><img src="img/close02.png" alt="" /></div>
@@ -383,15 +417,14 @@
                                                 <li>HTML, CSS</li>
                                             </ul>
                                         </div><!-- .cont_text02 end -->
-                                        <span>
+                                        <p>
                                             필요한 정보를 편리하고 쉽게 찾을 수 있도록 분류하였습니다. <br />
                                             애니매이션 효과와 감각적인 텍스트 배치 등을 통해 도시적인 <br />
                                             느낌의 웹페이지를 디자인하였습니다.
-                                        </span>
-                                        <div class="btn">
-                                            <a href="#none">상세페이지</a>
-                                            <a href="https://ksjksjksjksj.github.io/SS_LEPORTS_CENTER/">홈페이지</a>
-                                        </div><!-- .btn end -->
+                                        </p>
+
+                                        <button class="btn03">상세페이지</button>
+                                        <button onclick="location.href='https://ksjksjksjksj.github.io/SS_LEPORTS_CENTER/';">홈페이지</button>
 
                                         <div class="ssl_page" id="s_page">
                                             <img src="img/ssl_page.jpg" alt="삼성 상세페이지" />
@@ -477,7 +510,7 @@
                                                     <li>HTML, CSS</li>
                                                 </ul>
                                             </div><!-- .cont_text02 end -->
-                                            <span>파리바게뜨 홈페이지를 모작하였습니다.</span>
+                                            <p>파리바게뜨 홈페이지를 모작하였습니다.</p>
                                             <div class="btn">
                                                 <!-- <a href="#">상세페이지</a> -->
                                                 <a href="https://ksjksjksjksj.github.io/PARIS-BAGUETTE/">홈페이지</a>
@@ -514,7 +547,7 @@
                                                     <li>HTML, CSS</li>
                                                 </ul>
                                             </div><!-- .cont_text02 end -->
-                                            <span>로컬라이브 홈페이지를 모작하였습니다.</span>
+                                            <p>로컬라이브 홈페이지를 모작하였습니다.</p>
                                             <div class="btn">
                                                 <!-- <a href="#">상세페이지</a> -->
                                                 <a href="https://ksjksjksjksj.github.io/local-live/">홈페이지</a>
@@ -565,7 +598,7 @@
                                                     <li>HTML, CSS</li>
                                                 </ul>
                                             </div><!-- .cont_text02 end -->
-                                            <span>대림미술관 홈페이지를 모바일형으로 모작하였습니다.</span>
+                                            <p>대림미술관 홈페이지를 모바일형으로 모작하였습니다.</p>
                                             <div class="btn">
                                                 <a href="#">상세페이지</a>
                                                 <a href="https://ksjksjksjksj.github.io/daelimmuseum_mobile/">홈페이지</a>
@@ -602,7 +635,7 @@
                                                     <li>HTML, CSS</li>
                                                 </ul>
                                             </div><!-- .cont_text02 end -->
-                                            <span>대림미술관 홈페이지를 모바일형으로 모작하였습니다.</span>
+                                            <p>대림미술관 홈페이지를 모바일형으로 모작하였습니다.</p>
                                             <div class="btn">
                                                 <a href="#">상세페이지</a>
                                                 <a href="https://ksjksjksjksj.github.io/manyo/">홈페이지</a>
@@ -631,27 +664,33 @@
                             <div class="swiper-slide">
                                 <div class="item01">
                                     <a href="#"><img src="img/sujeong_burger.jpg" alt="수정햄버거" /></a>
-                                    <p>adobe photoshop</p>
+                                    <p>Adobe Photoshop</p>
                                 </div><!-- .item01 end -->
                                 <div class="item02">
                                     <a href="#"><img src="img/cardnews02.jpg" alt="인스타카드뉴스02" /></a>
-                                    <p>adobe photoshop</p>
+                                    <p>Adobe Photoshop</p>
                                 </div><!-- .item01 end -->
                             </div>
                             <div class="swiper-slide">
                                 <div class="item03">
                                     <a href="#"><img src="img/cardnews01.jpg" alt="인스타카드뉴스01" /></a>
-                                    <p>adobe photoshop</p>
+                                    <p>Adobe Photoshop</p>
                                 </div><!-- .item03 end -->
                                 <div class="item04">
-                                    <a href="#"><img src="img/mytravel.jpg" alt="MY TRAVEL" /></a>
-                                    <p>adobe photoshop</p>
+                                    <a href="#"><img src="img/ai01.jpg" alt="일러스트" /></a>
+                                    <p>Adobe Illustrator</p>
                                 </div><!-- .item04 end -->
                             </div>
                             <div class="swiper-slide">
                                 <div class="item05">
                                     <a href="#"><img src="img/kolonsport.jpg" alt="코오롱" /></a>
-                                    <p>adobe photoshop</p>
+                                    <p>Adobe Photoshop</p>
+                                </div><!-- .item05 end -->
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="item04">
+                                    <a href="#"><img src="img/mytravel.jpg" alt="MY TRAVEL" /></a>
+                                    <p>Adobe Photoshop</p>
                                 </div><!-- .item05 end -->
                             </div>
 
